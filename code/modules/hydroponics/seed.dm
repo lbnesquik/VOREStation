@@ -9,6 +9,7 @@
 	var/seed_name                  // Plant name for seed packet.
 	var/seed_noun = "seeds"        // Descriptor for packet.
 	var/display_name               // Prettier name.
+	var/display_description        // Description on examine, if relevant
 	var/roundstart                 // If set, seed will not display variety number.
 	var/mysterious                 // Only used for the random seed packets.
 	var/can_self_harvest = 0       // Mostly used for living mobs.

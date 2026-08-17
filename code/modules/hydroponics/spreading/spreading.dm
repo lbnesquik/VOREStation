@@ -10,7 +10,7 @@
 			seed.set_trait(TRAIT_POTENCY,rand(potency_min, potency_max)) // 70-100 potency will help guarantee a wide spread and powerful effects.
 			seed.set_trait(TRAIT_MATURATION,rand(maturation_min, maturation_max))
 			seed.display_name = "strange plants" //more thematic for the vine infestation event
-			seed.description = "Very dangerous, alien vines. Grows at a quick pace.""
+			seed.display_description = "Very dangerous, alien vines. Grows at a quick pace."
 
 			//make vine zero start off fully matured
 			var/obj/effect/plant/vine = new(T,seed)
@@ -39,6 +39,7 @@
 
 /obj/effect/plant
 	name = "plant"
+	description = ""
 	anchored = TRUE
 	can_buckle = TRUE
 	opacity = 0
@@ -100,6 +101,7 @@
 		return INITIALIZE_HINT_QDEL
 
 	name = seed.display_name
+	description = seed.description
 	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/2)
 	if(seed.get_trait(TRAIT_SPREAD)==2)
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // Grabby
