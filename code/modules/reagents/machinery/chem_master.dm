@@ -536,6 +536,35 @@
 				return
 			var/obj/item/reagent_containers/food/condiment/P = new(loc)
 			reagents.trans_to_obj(P, 50)
+
+
+		if("create_bottle", "create_bottle_two")
+			if(condi || !reagents.total_volume)
+				return
+			var/count = CLAMP(round(text2num(arguments["num"]) || 0), 0, MAX_MULTI_AMOUNT)
+			if(!count)
+				return
+
+			if(!length(answer))
+				answer = reagents.get_master_reagent_name()
+			var/amount_per_bottle = CLAMP(reagents.total_volume / count, 0, MAX_UNITS_PER_BOTTLE)
+			while(count--)
+				if(reagents.total_volume <= 0)
+					to_chat(ui.user, span_notice("Not enough reagents to create these bottles!"))
+					return
+				var/obj/item/reagent_containers/glass/bottle/P = new(loc)
+				P.name = "[answer] bottle"
+				P.pixel_x = rand(-7, 7) // random position
+				P.pixel_y = rand(-7, 7)
+				P.icon_state = "bottle-[bottlesprite]" || "bottle-1"
+				reagents.trans_to_obj(P, amount_per_bottle)
+				P.update_icon()
+		if("create_bottle_multiple")
+			if(condi || !reagents.total_volume)
+				return
+			tgui_act("modal_open", list("id" = "create_bottle", "arguments" = list("num" = answer)), ui, state)
+
+
 		else
 			return FALSE
 
