@@ -43,11 +43,12 @@
 	if(stat & (NOPOWER))
 		icon_state = "[icon_base]-off"
 	else
-		icon_state = icon_bases
-		if(contents.len <= 4)
-			add_overlay("[icon_base]")
-		if(contents.len > 4)
-			add_overlay("[icon_base]-fill")
+		icon_state = icon_base
+
+	if(contents.len <= 4)
+		add_overlay("[icon_base]")
+	if(contents.len > 4)
+		add_overlay("[icon_base]-fill")
 
 /*
  * Hydroponics
