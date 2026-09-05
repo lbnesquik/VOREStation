@@ -44,11 +44,15 @@
 		icon_state = "[icon_base]-off"
 	else
 		icon_state = icon_base
-		switch(contents.len)
-			if(0)
-				add_overlay("[icon_base]")
-			if(1 to 3)
-				add_overlay("[icon_base]-fill")
+		// switch(contents.len)
+		// 	if(0)
+		// 		add_overlay("[icon_base]")
+		// 	if()
+		// 		add_overlay("[icon_base]-fill")
+		if(contents.len <= 4)
+			add_overlay("[icon_base]")
+		if(contents.len > 4)
+			add_overlay("[icon_base]-fill")
 
 /*
  * Hydroponics
