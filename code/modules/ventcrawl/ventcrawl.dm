@@ -190,8 +190,7 @@
 				return
 			if(vent_found)
 				break
-
-	// Check if the vent is even possible to enter
+	// Check if the vent is next to us.
 	if(!vent_found)
 		to_chat(src, span_danger("You must be standing on or beside an air vent to enter it."))
 		return
