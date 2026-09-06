@@ -20,7 +20,11 @@
 	var/locked = 0
 	var/scan_id = 1
 	var/is_secure = 0
-	var/wrenchable = 1
+	var/shoot_inventory = FALSE
+	var/locked = FALSE
+	var/scan_id = TRUE
+	var/is_secure = FALSE
+	var/wrenchable = TRUE
 	var/persistent = null // Path of persistence datum used to track contents
 	circuit = /obj/item/circuitboard/smartfridge //This one is meant to be uncraftable, however.
 
