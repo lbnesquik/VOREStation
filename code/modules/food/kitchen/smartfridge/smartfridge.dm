@@ -121,7 +121,13 @@
 		update_icon()
 		return
 
-	if(wrenchable && default_unfasten_wrench(user, O, 20))
+	if(wrenchable)
+		if(O.has_tool_quality(TOOL_WRENCH))
+			if(allowed(user))
+				default_unfasten_wrench(user, O, 20)
+			else
+				to_chat(user, span_warning("\The [src] smartly denies you access to wrench it."))
+			return
 		return
 
 	if(O.has_tool_quality(TOOL_CROWBAR))
