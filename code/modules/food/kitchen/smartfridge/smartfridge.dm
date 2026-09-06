@@ -16,12 +16,8 @@
 	var/datum/stored_item/currently_vending = null	//What we're putting out of the machine.
 	var/stored_datum_type = /datum/stored_item
 	var/seconds_electrified = 0;
-	var/shoot_inventory = 0
 	var/locked = 0
-	var/scan_id = 1
-	var/is_secure = 0
 	var/shoot_inventory = FALSE
-	var/locked = FALSE
 	var/scan_id = TRUE
 	var/is_secure = FALSE
 	var/wrenchable = TRUE
@@ -32,7 +28,7 @@
 	var/playing_sound = FALSE
 
 /obj/machinery/smartfridge/secure
-	is_secure = 1
+	is_secure = TRUE
 
 /obj/machinery/smartfridge/Initialize(mapload)
 	. = ..()
@@ -179,7 +175,7 @@
 
 /obj/machinery/smartfridge/secure/emag_act(remaining_charges, mob/user)
 	if(!emagged)
-		emagged = 1
+		emagged = TRUE
 		locked = -1
 		to_chat(user, span_filter_notice("You short out the product lock on [src]."))
 		return TRUE
