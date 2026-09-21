@@ -110,6 +110,7 @@
   - bugfix: radiation sources that qdel before processing their radiation pulse would
       lock up radiation subsystem
   - code_imp: Radiation debug object
+<<<<<<< HEAD
 2026-09-18:
   FluffMedic:
   - maptweak: Tweaked map to removed further objects in solid walls for unit test
@@ -143,3 +144,5 @@
   lbnesquik:
   - bugfix: Fixed cyborgs not being able to finish the reattach arm surgery with their
       medical gripper
+=======
+>>>>>>> 6c01bcaaedd1544b5ec3f4f3de4562ca0e5c8a34
