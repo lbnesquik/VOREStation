@@ -85,7 +85,7 @@ Possible to do for anyone motivated enough:
 			to_chat(user, span_danger("ERROR:") + " Image feed in progress.")
 			return
 		create_holo(user)//Create one.
-		visible_message("A holographic image of [user] flicks to life right before your eyes!")
+		visible_message("A holographic image of [user] flicks to life right before your eyes!", runemessage="hums to life.")
 	else
 		to_chat(user, span_danger("ERROR:") + " Unable to project hologram.")
 	return
