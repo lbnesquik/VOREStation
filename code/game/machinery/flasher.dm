@@ -70,6 +70,7 @@
 
 	playsound(src, 'sound/weapons/flash.ogg', 100, 1)
 	flick("[base_state]_flash", src)
+	balloon_alert_visible("Flashes!")
 	last_flash = world.time
 	use_power(1500)
 

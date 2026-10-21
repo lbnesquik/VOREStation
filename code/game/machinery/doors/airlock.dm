@@ -684,6 +684,7 @@ About the new airlock wires panel:
 	else
 		lock()
 		to_chat(user, span_warning("The door bolts have been dropped."))
+		balloon_alert("Clunks!")
 		// log_combat(user, src, "bolted")
 
 /obj/machinery/door/airlock/proc/user_toggle_open(mob/user)

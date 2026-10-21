@@ -374,6 +374,7 @@
 	icon_state = initial(icon_state)
 	busy = FALSE
 	SStgui.update_uis(src)
+	balloon_alert_visible("[src] finishes building.")
 
 /obj/machinery/autolathe/MouseDrop(over_object, src_location, over_location)
 	if(isobserver(usr) || !Adjacent(usr))

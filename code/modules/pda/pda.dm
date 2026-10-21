@@ -460,11 +460,13 @@
 /obj/item/pda/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(istype(M, /mob/living/carbon) && scanmode)
 		scanmode.scan_mob(M, user)
+		balloon_alert_visible("Boops.")
 		return ITEM_INTERACT_SUCCESS
 
 /obj/item/pda/afterattack(atom/A, mob/user, proximity)
 	if(proximity && scanmode)
 		scanmode.scan_atom(A, user)
+		balloon_alert_visible("Boops.")
 
 /obj/item/pda/proc/explode() //This needs tuning. //Sure did.
 	if(!src.detonate) return

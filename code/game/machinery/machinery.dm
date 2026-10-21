@@ -348,6 +348,7 @@ Class Procs:
 			RefreshParts()
 			if(parts_replaced)
 				R.play_rped_sound()
+				balloon_alert_visible("Upgraded")
 	return 1
 
 // This is it's own proc so it can be more easily found when looking for machines that can upgrade themselves from mapped parts

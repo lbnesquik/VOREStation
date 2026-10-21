@@ -282,6 +282,7 @@ Thus, the two variables affect pump operation are set in New():
 	to_chat(user, span_notice("You set the [name] to max output"))
 	target_pressure = max_pressure_setting
 	add_fingerprint(user)
+	balloon_alert_visible("Clicks.")
 	return CLICK_ACTION_SUCCESS
 
 
@@ -295,6 +296,7 @@ Thus, the two variables affect pump operation are set in New():
 	update_icon()
 	add_fingerprint(user)
 	to_chat(user, span_notice("You toggle the [name] [use_power ? "on" : "off"]."))
+	balloon_alert_visible("Toggles.")
 
 	return CLICK_ACTION_SUCCESS
 

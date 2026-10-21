@@ -324,6 +324,7 @@
 
 	atom_say("The fabrication of [built_part] is now complete.")
 	built_part.forceMove(exit)
+	balloon_alert_visible("dispenses a part.")
 
 	top_job_id += 1
 

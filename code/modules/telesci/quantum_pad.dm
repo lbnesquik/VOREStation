@@ -191,6 +191,7 @@
 	//VOREStation Addition End
 	playsound(src, 'sound/weapons/flash.ogg', 25, 1)
 	teleporting = 1
+	balloon_alert_visible("Charging...")
 
 	spawn(teleport_speed)
 		// We gone
@@ -225,6 +226,7 @@
 		sparks()
 		linked_pad.sparks()
 
+		visible_message(runemessage="Triggered!")
 		flick("qpad-beam-out", src)
 		playsound(src, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
 		flick("qpad-beam-in", linked_pad)

@@ -190,6 +190,7 @@
 
 	playsound(src, 'sound/machines/blender.ogg', 50, 1)
 	inuse = 1
+	balloon_alert_visible("VrrrRRRrrrr!")
 
 	// Reset the machine.
 	spawn(60)

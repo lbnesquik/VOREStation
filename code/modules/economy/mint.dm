@@ -37,7 +37,7 @@
 				M.amount--
 				while(coinsToProduce-- > 0)
 					new M.coin_type(user.loc)
-				src.visible_message(span_notice("\The [src] rattles and dispenses several [M.default_type] coins!"))
+				src.visible_message(span_notice("\The [src] rattles and dispenses several [M.default_type] coins!"), runemessage="Clunks")
 				coinsToProduce = initial(coinsToProduce)
 				if(M.amount == 0)
 					icon_state = "coinpress0"

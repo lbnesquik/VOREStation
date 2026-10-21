@@ -147,7 +147,7 @@ GLOBAL_LIST_INIT(recharger_battery_exempt, list(
 		G.forceMove(src)
 		charging = G
 		update_icon()
-		user.visible_message("[user] inserts [charging] into [src].", "You insert [charging] into [src].")
+		user.visible_message("[user] inserts [charging] into [src].", "You insert [charging] into [src].", runemessage="Vshclick")
 
 	else if(portable && G.has_tool_quality(TOOL_WRENCH))
 		if(charging)

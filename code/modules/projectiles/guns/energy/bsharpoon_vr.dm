@@ -99,6 +99,7 @@
 	firable = FALSE
 	VARSET_IN(src, firable, TRUE, 30 SECONDS)
 	playsound(src, 'sound/weapons/wave.ogg', 60, 1)
+	balloon_alert_visible("Whooshes!")
 
 	user.visible_message(span_warning("[user] fires \the [src]!"),span_warning("You fire \the [src]!"))
 

@@ -107,6 +107,7 @@
 				created_object.add_fingerprint(ui.user)
 				wait = TRUE
 				VARSET_IN(src, wait, FALSE, 15)
+				visible_message(span_notice("[src] dispenses [created_object]."),runemessage="Clunk")
 
 
 /obj/machinery/pipedispenser/attackby(obj/item/W as obj, mob/user as mob)

@@ -447,6 +447,7 @@
 	busy = FALSE
 	SStgui.update_uis(src)
 	icon_state = initial(icon_state)
+	balloon_alert_visible("[src] finishes building.")
 
 /obj/machinery/rnd/production/MouseDrop(atom/over, src_location, over_location, src_control, over_control, params)
 	var/mob/user = usr

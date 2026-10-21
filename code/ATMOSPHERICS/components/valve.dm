@@ -136,8 +136,10 @@
 	sleep(10)
 	if (src.open)
 		src.close()
+		balloon_alert_visible("closes.")
 	else
 		src.open()
+		balloon_alert_visible("clunks open.")
 
 /obj/machinery/atmospherics/valve/process()
 	..()
