@@ -197,6 +197,9 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(show_player_panel, R_HOLDER, "Show Player Panel", m
 				\[ Slime: <a href='byond://?_src_=holder;[HrefToken()];simplemake=slime;mob=[REF(player)]'>Baby</a>
 				<a href='byond://?_src_=holder;[HrefToken()];simplemake=adultslime;mob=[REF(player)]'>Adult</a> \]
 				<br>
+				\[ Silicons : <a href='byond://?_src_=holder;[HrefToken()];simplemake=robot;mob=[REF(player)]'>Cyborg</a> |
+				<a href='byond://?_src_=holder;[HrefToken()];simplemake=ai;mob=[REF(player)]'>AI</a> \]
+				<br>
 				\[ Animals : <a href='byond://?_src_=holder;[HrefToken()];simplemake=monkey;mob=[REF(player)]'>Monkey</a> |
 				<a href='byond://?_src_=holder;[HrefToken()];simplemake=robot;mob=[REF(player)]'>Cyborg</a> |
 				<a href='byond://?_src_=holder;[HrefToken()];simplemake=cat;mob=[REF(player)]'>Cat</a> |
