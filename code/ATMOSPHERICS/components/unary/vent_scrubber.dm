@@ -183,6 +183,8 @@
 	if(!signal.data["tag"] || (signal.data["tag"] != id_tag) || (signal.data["sigtype"]!="command"))
 		return 0
 
+	balloon_alert_visible(span_info("Clunks."))
+
 	if(signal.data["power"] != null)
 		update_use_power(text2num(signal.data["power"]))
 	if(signal.data["power_toggle"] != null)

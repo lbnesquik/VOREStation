@@ -316,6 +316,8 @@
 	if(!signal.data["tag"] || (signal.data["tag"] != id_tag) || (signal.data["sigtype"]!="command"))
 		return 0
 
+	balloon_alert_visible(span_info("Clunks."))
+
 	if(signal.data["purge"] != null)
 		pressure_checks &= ~1
 		pump_direction = 0
