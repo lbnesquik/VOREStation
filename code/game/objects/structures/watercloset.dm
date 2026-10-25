@@ -10,6 +10,8 @@
 /obj/structure/toilet
 	name = "toilet"
 	desc = "The HT-451, a torque rotation-based, waste disposal unit for small matter. This one seems remarkably clean."
+	description_info = "Flush it with alt click."
+	description_antag = "You can hide things in there with a crowbar! You could also just slam someone's head in there."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "toilet"
 	density = FALSE
