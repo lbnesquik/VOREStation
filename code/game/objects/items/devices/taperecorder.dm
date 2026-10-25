@@ -28,6 +28,18 @@
 		update_icon()
 	GLOB.listening_objects += src
 
+/obj/item/taperecorder/examine(mob/user)
+	. = ..()
+
+	if(Adjacent(user))
+		if(playing)
+			. += span_notice("It is playing a recording.")
+		if(mytape)
+			. += span_notice("You can see [mytape] inside.")
+		if(!mytape)
+			. += span_notice("It is currently empty")
+
+
 /obj/item/taperecorder/empty
 	mytape = null
 

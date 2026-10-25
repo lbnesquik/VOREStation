@@ -395,6 +395,7 @@ Book Cart End
  */
 /obj/item/barcodescanner
 	name = "barcode scanner"
+	desc = "A barcode scanner wrapped in a plastic shell. It has a sticker for an old book publisher which has since shifted to a business of phoron and phoron related accessories."
 	icon = 'icons/obj/library.dmi'
 	icon_state ="scanner"
 	throw_speed = 1
