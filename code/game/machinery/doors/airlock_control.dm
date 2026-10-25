@@ -287,6 +287,7 @@
 	return T.return_air()
 
 /obj/machinery/access_button
+	desc = "Usually commands a set of airlock within sight."
 	icon = 'icons/obj/airlock_machines.dmi'
 	icon_state = "access_button_standby"
 	layer = ABOVE_WINDOW_LAYER
@@ -354,6 +355,7 @@
 	add_fingerprint(user)
 	if(!allowed(user))
 		to_chat(user, span_warning("Access Denied"))
+		balloon_alert_visible(span_alert("Bzzzt"))
 
 	else if(radio_connection)
 		var/datum/signal/signal = new
@@ -362,6 +364,7 @@
 		signal.data["command"] = command
 
 		radio_connection.post_signal(src, signal, range = AIRLOCK_CONTROL_RANGE, radio_filter = RADIO_AIRLOCK)
+		balloon_alert_visible(span_notice("be-boop"))
 	flick("access_button_cycle", src)
 
 /obj/machinery/access_button/allow_pai_interaction(mob/living/silicon/pai/user, proximity_flag)
