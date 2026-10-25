@@ -80,9 +80,9 @@
 /obj/vehicle/train/engine/janicart/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
-		. += "This [callme] contains [reagents.total_volume] unit\s of water!"
+		. += span_notice("This [callme] contains [reagents.total_volume] unit\s of water!")
 		if(mybag)
-			. += "\A [mybag] is hanging on the [callme]."
+			. += span_notice("\A [mybag] is hanging on the [callme].")
 
 /obj/vehicle/train/engine/janicart/verb/toggle_brush()
 	set name = "Toggle brushes"

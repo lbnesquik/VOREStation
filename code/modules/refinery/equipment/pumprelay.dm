@@ -59,4 +59,4 @@
 
 /obj/machinery/pump_relay/examine(mob/user, infix, suffix)
 	. = ..()
-	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u."
+	. += span_notice("The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u.")

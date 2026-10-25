@@ -252,9 +252,9 @@
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(resetmode)
-			. += "It is currently resetting light colors."
+			. += span_notice("It is currently resetting light colors.")
 		else
-			. += "It is currently coloring lights."
+			. += span_notice("It is currently coloring lights.")
 
 /obj/item/lightpainter/attack_self(mob/user)
 	. = ..(user)

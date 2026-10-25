@@ -38,11 +38,11 @@
 
 	if(Adjacent(user))
 		if(!contents.len)
-			. += "There are no [icon_type]s left in the box."
+			. += span_notice("There are no [icon_type]s left in the box.")
 		else if(contents.len == 1)
-			. += "There is one [icon_type] left in the box."
+			. += span_notice("There is one [icon_type] left in the box.")
 		else
-			. += "There are [contents.len] [icon_type]s in the box."
+			. += span_notice("There are [contents.len] [icon_type]s in the box.")
 
 /*
  * Egg Box

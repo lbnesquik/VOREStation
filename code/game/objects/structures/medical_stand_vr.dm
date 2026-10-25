@@ -342,8 +342,8 @@
 		return
 
 	if(beaker)
-		. += "The IV drip is [mode ? "injecting" : "taking blood"]."
-		. += "It is set to transfer [transfer_amount]u of chemicals per cycle."
+		. += span_notice("The IV drip is [mode ? "injecting" : "taking blood"].")
+		. += span_notice("It is set to transfer [transfer_amount]u of chemicals per cycle.")
 		if(beaker.reagents && beaker.reagents.total_volume)
 			. += span_notice("Attached is \a [beaker] with [beaker.reagents.total_volume] units of liquid.")
 		else

@@ -42,9 +42,9 @@
 /obj/machinery/cell_charger/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 5)
-		. += "[charging ? "[charging]" : "Nothing"] is in [src]."
+		. += span_notice("[charging ? "[charging]" : "Nothing"] is in [src].")
 		if(charging)
-			. += "Current charge: [charging.charge] / [charging.maxcharge]"
+			. += span_notice("Current charge: [charging.charge] / [charging.maxcharge]")
 
 /obj/machinery/cell_charger/attackby(obj/item/W, mob/user)
 	if(stat & BROKEN)
