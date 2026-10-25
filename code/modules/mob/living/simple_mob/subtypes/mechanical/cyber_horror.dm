@@ -214,7 +214,7 @@
 //Slightly more durable fodder
 /mob/living/simple_mob/mechanical/cyber_horror/vox
 	name = "Vox shambles"
-	desc = "Once a Vox now torn and changed, peices of a Durand has been grafted onto it."
+	desc = "Once a Vox now torn and changed, pieces of a Durand has been grafted onto it."
 	icon_state = "vox_cyber_horror"
 	icon_dead = "vox_cyber_horror_dead"
 	say_list_type = /datum/say_list/cyber_horror/vox

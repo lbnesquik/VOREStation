@@ -1,6 +1,7 @@
 #define FUSION_ROD_SHEET_AMT 15
 /obj/machinery/fusion_fuel_compressor
 	name = "fuel compressor"
+	desc = "Used to prepare raw fuel into ready, fuel assemblies."
 	icon = 'icons/obj/machines/power/fusion.dmi'
 	icon_state = "fuel_compressor1"
 	density = TRUE

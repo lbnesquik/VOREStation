@@ -1,6 +1,6 @@
 /obj/structure/stairs
 	name = "Stairs"
-	desc = "Stairs leading to another deck.  Not too useful if the gravity goes out."
+	desc = "Stairs leading to another deck. Not too useful if the gravity goes out."
 	icon = 'icons/obj/structures/multiz.dmi'
 	icon_state = "stair"
 	opacity = 0

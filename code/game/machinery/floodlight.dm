@@ -19,6 +19,15 @@
 	AddElement(/datum/element/climbable)
 	AddElement(/datum/element/rotatable)
 
+/obj/machinery/floodlight/examine(mob/user)
+	. = ..()
+
+	if(Adjacent(user))
+		if(open)
+			. += span_notice("The cover is open.")
+		if(open && cell)
+			. += span_notice("It has [cell] installed.")
+
 /obj/machinery/floodlight/update_icon()
 	cut_overlays()
 	icon_state = "flood[open ? "o" : ""][open && cell ? "b" : ""]0[on]"

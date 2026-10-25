@@ -70,7 +70,7 @@
  */
 /obj/item/gun/energy/gun/etommy
 	name = "Energy RCW"
-	desc = "The Lawson Arms experimental Rapid Capacitor Weapon is a highly reguarded and deadly peice of military hardware. Using a large drum shaped \
+	desc = "The Lawson Arms experimental Rapid Capacitor Weapon is a highly reguarded and deadly piece of military hardware. Using a large drum shaped \
 	capacitor bank the weapon is capable of accurate, rapid burst fire."
 	description_fluff = "The Rapid Capacitor Weapon is one of a few weapons that never saw full production. IT was an experimental Shock Trooper weapon developed by \
 	Lawsom Arms during the Hegemony Conflict. While only a few hundred were made it didn't take long for smaller arms dealers to break apart stolen units and revese engineer \

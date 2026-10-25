@@ -2,6 +2,7 @@ GLOBAL_LIST_EMPTY(fuel_injectors)
 
 /obj/machinery/fusion_fuel_injector
 	name = "fuel injector"
+	desc = "A large, heavy-duty injector used in fusion power operation. NOT for any other uses!"
 	icon = 'icons/obj/machines/power/fusion.dmi'
 	icon_state = "injector0"
 	density = TRUE

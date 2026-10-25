@@ -4,7 +4,8 @@
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "orebox0"
 	name = "ore box"
-	desc = "A heavy box used for storing ore."
+	desc = "A heavy box used for storing ore. You don't think you could fill it anytime soon."
+	description_info = "If you are dragging it while holding an ore bag, you'll automatically fill the box."
 	density = TRUE
 	var/last_update = 0
 	var/list/stored_ore = list(
@@ -78,14 +79,14 @@
 
 	add_fingerprint(user)
 
-	. += "It holds:"
+	. += span_notice("It holds:")
 	var/has_ore = 0
 	for(var/ore in stored_ore)
 		if(stored_ore[ore] > 0)
-			. += "- [stored_ore[ore]] [ore]"
+			. += span_notice("- [stored_ore[ore]] [ore]")
 			has_ore = 1
 	if(!has_ore)
-		. += "Nothing."
+		. += span_notice("Nothing.")
 
 // /obj/structure/ore_box/verb/empty_box() //Servercrash.mov
 //	set name = "Empty Ore Box"

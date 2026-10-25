@@ -33,9 +33,9 @@
 
 	switch(hole_size)
 		if(MEDIUM_HOLE)
-			. += "There is a large hole in it."
+			. += span_notice("There is a large hole in it.")
 		if(LARGE_HOLE)
-			. += "It has been completely cut through."
+			. += span_notice("It has been completely cut through.")
 
 /obj/structure/fence/get_description_interaction()
 	var/list/results = list()
