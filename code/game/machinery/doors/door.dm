@@ -379,7 +379,13 @@
 
 /obj/machinery/door/take_damage(damage)
 	var/initialhealth = health
-	health = max(0, health - damage)
+	health = min((initial(a) * -1), health - damage)
+	/// 2X original HP
+	if(health == ((initial(a) * -1)))
+		visible_message("\The [src] collapses into a heap of parts!" )
+		new /obj/item/stack/material/steel(loc, 2)
+		new /obj/item/stack/rods(loc, 3)
+		qdel(src)
 	if(health <= 0 && initialhealth > 0)
 		set_broken()
 	else if(health < maxhealth / 4 && initialhealth >= maxhealth / 4)
@@ -388,6 +394,7 @@
 		visible_message("\The [src] looks seriously damaged!" )
 	else if(health < maxhealth * 3/4 && initialhealth >= maxhealth * 3/4)
 		visible_message("\The [src] shows signs of damage!" )
+
 	update_icon()
 	return
 
