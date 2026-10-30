@@ -379,9 +379,9 @@
 
 /obj/machinery/door/take_damage(damage)
 	var/initialhealth = health
-	health = min((initial(a) * -1), health - damage)
+	health = min((initial(health) * -1), health - damage)
 	/// 2X original HP
-	if(health == ((initial(a) * -1)))
+	if(health == ((initial(health) * -1)))
 		visible_message("\The [src] collapses into a heap of parts!" )
 		new /obj/item/stack/material/steel(loc, 2)
 		new /obj/item/stack/rods(loc, 3)
