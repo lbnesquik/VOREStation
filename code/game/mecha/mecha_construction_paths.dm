@@ -345,8 +345,12 @@
 					list("key"=IS_SCREWDRIVER,
 							"backkey"=IS_CROWBAR,
 							"desc"="Advanced scanner module is installed"),
+					// //10
+					// list("key"=/obj/item/stock_parts/scanning_module/adv,
+					// 		"backkey"=IS_SCREWDRIVER,
+					// 		"desc"="Targeting module is secured"),
 					//10
-					list("key"=/obj/item/stock_parts/scanning_module/adv,
+					list("key"=SENSOR_RTNG_2,
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="Targeting module is secured"),
 					//11
