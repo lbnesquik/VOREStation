@@ -427,6 +427,7 @@
 	icon_state = "scan_module_phasic"
 	rating = 3
 	matter = list(MAT_STEEL = MATERIAL_COST(0.025),MAT_GLASS = MATERIAL_COST(0.01))
+	tool_qualities = SENSOR_RTNG_3
 
 /obj/item/stock_parts/manipulator/pico
 	name = "pico-manipulator"

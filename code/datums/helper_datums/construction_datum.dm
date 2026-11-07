@@ -122,6 +122,8 @@
 		if(IS_WELDER)
 			if(I.has_tool_quality(IS_WELDER))
 				return FORWARD
+		if(SENSOR_RTNG_2)
+			if(I.has_tool_quality(SENSOR_RTNG_2))
 
 	switch(L["backkey"])
 		if(IS_SCREWDRIVER)

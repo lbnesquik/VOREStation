@@ -612,3 +612,10 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define LADDER_CONSTRUCTION_WELDED 2
 
 #define FINGERPRINT_COMPLETE 6
+
+
+//Parts quality
+#define SENSOR_RTNG_1 1
+#define SENSOR_RTNG_2 2
+#define SENSOR_RTNG_3 3
+#define SENSOR_RTNG_4 4
