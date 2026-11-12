@@ -19,7 +19,7 @@
 	if(H.species && H.species.exhale_type)
 		gasid = H.species.exhale_type
 	var/datum/gas_mixture/grave_breath = new()
-	grave_breath.adjust_gas(gasid, BREATH_MOLES)
+	grave_breath.adjust_gas(gasid, BREATH_MOLES*30)
 	grave_breath.temperature = H.bodytemperature
 
 	var/atom/location = H.loc
