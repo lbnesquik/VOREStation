@@ -10,3 +10,17 @@
 			"sound" = sound(get_sfx("belches")),
 			"vol" = emote_volume / 2
 		)
+
+/datum/decl/emote/audible/belch/do_extra(atom/user, atom/target)
+	. = ..()
+
+	var/gasid = GAS_CO2
+	var/mob/living/carbon/human/H = src
+	if(H.species && H.species.exhale_type)
+		gasid = H.species.exhale_type
+	var/datum/gas_mixture/grave_breath = new()
+	grave_breath.adjust_gas(gasid, BREATH_MOLES)
+	grave_breath.temperature = H.bodytemperature
+
+	var/atom/location = H.loc
+	location.assume_air(grave_breath)
