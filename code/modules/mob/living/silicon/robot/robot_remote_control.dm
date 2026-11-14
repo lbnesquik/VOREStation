@@ -80,6 +80,11 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 // Called after the AI transfers over.
 /mob/living/silicon/robot/proc/post_deploy()
+	if(!(src.ckey in warned_AIs))
+		warned_AIs |= src.ckey
+		tgui_alert_async(src,{"
+			You are about to deploy into an AI shell. For good roleplay, if there are cyborgs available for tasks, please be mindful not to overtake their job and roles.
+			"},"OOC Warning")
 	return
 
 /mob/living/silicon/robot/proc/undeploy(message)

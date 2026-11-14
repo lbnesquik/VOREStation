@@ -143,6 +143,8 @@
 	vore_fullness_ex = list()
 	vore_icon_bellies = list()
 
+	var/warned_AIs = list()
+
 /mob/living/silicon/robot/Initialize(mapload, is_decoy)
 	spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src)
